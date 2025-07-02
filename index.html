@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacc Check</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <p style="text-align: center; color: red; font-weight: bold;">Student practice page ONLY</p>
+        <h1>Vacc Check</h1>
+        <div class="dob-section">
+            <label for="dob-input">Enter Child's Date of Birth:</label>
+            <input type="date" id="dob-input">
+        </div>
+        <div class="upload-section">
+            <input type="file" id="vaccine-record-input" accept="image/*">
+            <button id="upload-button">Upload Record</button>
+        </div>
+        <div id="vaccine-schedule"></div>
+        <button id="next-steps-button">What are my next steps?</button>
+        <div id="details-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2 id="vaccine-name"></h2>
+                <h3>Diseases Prevented:</h3>
+                <p id="diseases-prevented"></p>
+                <h3>Common Side Effects:</h3>
+                <p id="side-effects"></p>
+            </div>
+        </div>
+        <div id="next-steps-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Next Steps</h2>
+                <div class="language-selection">
+                    <label><input type="radio" name="language" value="en" checked> English</label>
+                    <label><input type="radio" name="language" value="es"> Español</label>
+                </div>
+                <div id="next-steps-content"></div>
+                <button id="listen-button">Listen to text</button>
+            </div>
+        </div>
+        <div id="timeline-container">
+            <h2>Vaccination Timeline</h2>
+            <div id="timeline"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
